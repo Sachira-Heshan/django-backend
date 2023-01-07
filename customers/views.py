@@ -8,7 +8,7 @@ from rest_framework_simplejwt.tokens import RefreshToken
 
 
 @api_view(['GET', 'POST'])
-@permission_classes([IsAuthenticated])
+# @permission_classes([IsAuthenticated])
 def customers(request):
     # invoke serializer and return to client
     if request.method == 'GET':
@@ -25,7 +25,7 @@ def customers(request):
 
 
 @api_view(['GET', 'POST', 'DELETE'])
-@permission_classes([IsAuthenticated])
+# @permission_classes([IsAuthenticated])
 def customer(request, id):
     # invoke serializer and return to client
     try:
